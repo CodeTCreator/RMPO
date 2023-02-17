@@ -2,6 +2,10 @@
     <string name="app_name">My Application</string>
     <string name="app_name_test">Тестовое приложение</string>
     <string name="data_view_1">Text View 1!</string>
+    <string name="data_view_2">Text View 2!</string>
+    <string name="data_view_3">Text View 3!</string>
     <string name="editText_1">Тексттт....</string>
     <string name="btn_reset">Reset</string>
+    <string name="optionsItem1">Выбрать цвет</string>
+    <string name="optionsItem2">Сбросить до заводских</string>
 </resources>

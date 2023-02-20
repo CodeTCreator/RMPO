@@ -4,8 +4,19 @@
     <string name="data_view_1">Text View 1!</string>
     <string name="data_view_2">Text View 2!</string>
     <string name="data_view_3">Text View 3!</string>
-    <string name="editText_1">Тексттт....</string>
-    <string name="btn_reset">Reset</string>
     <string name="optionsItem1">Выбрать цвет</string>
     <string name="optionsItem2">Сбросить до заводских</string>
+    <string name="contextMenu1_item1">Красный цвет</string>
+    <string name="contextMenu1_item2">Зеленый цвет</string>
+    <string name="contextMenu1_item3">Синий цвет</string>
+    <string name="contextMenu1_item4">Оранжевый цвет</string>
+    <string name="contextMenu1_item5">Белый цвет</string>
+    <string name="contextMenu2_item1">"20"</string>
+    <string name="contextMenu2_item2">"30"</string>
+    <string name="contextMenu2_item3">"40"</string>
+    <string name="contextMenu2_item4">"50"</string>
+    <string name="contextMenu2_item5">"60"</string>
+    <string name="contextMenu3_item1">Слева</string>
+    <string name="contextMenu3_item2">По центру</string>
+    <string name="contextMenu3_item3">Справа</string>
 </resources>

@@ -2,27 +2,19 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.Gravity;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Menu;
-import android.view.SubMenu;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -92,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         colors[2]= R.color.black;
         colors[3]= R.color.green;
         colors[4]= R.color.white;
+        Toast.makeText(getApplicationContext(),"Работа с OptionsMenu", Toast.LENGTH_LONG).show();
         Resources resources = getResources();
         switch (id){
             case R.id.item1:
@@ -106,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 TextView view_1 = findViewById(R.id.textView_1);
                 TextView view_2 = findViewById(R.id.textView_2);
                 TextView view_3 = findViewById(R.id.textView_3);
-
+                //Всплывающее уведомление
+                Toast.makeText(getApplicationContext(),"Сброс до изначального состояния", Toast.LENGTH_LONG).show();
                 //Установка значений по умолчанию
                 view_1.setTextColor(d_view1_colorText);
                 view_2.setTextSize(TypedValue.COMPLEX_UNIT_PX,d_view2_sizeText);
@@ -130,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item1_5:
                 int random_number1 = 1 + (int) (Math.random() * b);
                 my_layout.setBackgroundColor(resources.getColor(colors[random_number1],  null));
+                Toast.makeText(getApplicationContext(),"Выбор случайного цвета", Toast.LENGTH_LONG).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -140,9 +135,9 @@ public class MainActivity extends AppCompatActivity {
         TextView view1 = findViewById(R.id.textView_1);
         TextView view2 = findViewById(R.id.textView_2);
         TextView view3 = findViewById(R.id.textView_3);
+        Toast.makeText(getApplicationContext(),"Работает контекстное меню", Toast.LENGTH_LONG).show();
         switch (item.getItemId()) {
             case R.id.item1_CM1:
-                //view1.setBackgroundColor(getResources().getColor(R.color.red,null));
                 view1.setTextColor(getResources().getColor(R.color.red,null));
                 return true;
             case R.id.item2_CM1:

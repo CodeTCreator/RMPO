@@ -1,22 +1,29 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="app_name_test">Тестовое приложение</string>
-    <string name="data_view_1">Text View 1!</string>
-    <string name="data_view_2">Text View 2!</string>
-    <string name="data_view_3">Text View 3!</string>
-    <string name="optionsItem1">Выбрать цвет</string>
-    <string name="optionsItem2">Сбросить до заводских</string>
-    <string name="contextMenu1_item1">Красный цвет</string>
-    <string name="contextMenu1_item2">Зеленый цвет</string>
-    <string name="contextMenu1_item3">Синий цвет</string>
-    <string name="contextMenu1_item4">Оранжевый цвет</string>
-    <string name="contextMenu1_item5">Белый цвет</string>
-    <string name="contextMenu2_item1">"20"</string>
-    <string name="contextMenu2_item2">"30"</string>
-    <string name="contextMenu2_item3">"40"</string>
-    <string name="contextMenu2_item4">"50"</string>
-    <string name="contextMenu2_item5">"60"</string>
-    <string name="contextMenu3_item1">Слева</string>
-    <string name="contextMenu3_item2">По центру</string>
-    <string name="contextMenu3_item3">Справа</string>
+    <string name="data_view_1">Вычисление определенного интеграла</string>
+    <string name="data_view_2">Выберите необходимую функцию:</string>
+    <string name="data_view_3">Укажите пределы интегрирования</string>
+
+    <string name="button">Вычислить</string>
+    <string name="getting_button">Получить значения</string>
+
+    <string name="data_functions_1">X<sup>2</sup></string>
+    <string name="data_functions_2">X<sup>3</sup>+x<sup>2</sup>-5</string>
+    <string name="data_functions_3">X<sup>4</sup>+X<sup>2</sup>+25</string>
+    <string name="data_functions_4">(X<sup>2</sup>+7-X)<sup>3</sup></string>
+    <string name="data_functions_5">sin(X)<sup>2</sup></string>
+    <string name="data_functions_6">(X+5)<sup>2</sup></string>
+
+    <string name="check">ПРОВЕРКА</string>
+
+    <string name="editText_warning1">Ошибка! Проверьте пределы интегрирования!</string>
+    <string name="editText_warning2">Ошибка! Нижний предел больше верхнего!</string>
+
+    <string name="function1_description">Выбрана функция 1</string>
+    <string name="function2_description">Выбрана функция 2</string>
+    <string name="function3_description">Выбрана функция 3</string>
+    <string name="function4_description">Выбрана функция 4</string>
+    <string name="function5_description">Выбрана функция 5</string>
+    <string name="function6_description">Выбрана функция 6</string>
 </resources>

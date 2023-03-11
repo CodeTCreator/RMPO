@@ -4,10 +4,11 @@
     <string name="data_view_1">Вычисление определенного интеграла</string>
     <string name="data_view_2">Выберите необходимую функцию:</string>
     <string name="data_view_3">Укажите пределы интегрирования</string>
+    <string name="data_activityInstall">Установка значений</string>
 
     <string name="button">Вычислить</string>
     <string name="getting_button">Получить значения</string>
-    <string name="back_button">Вернуться назад</string>
+    <string name="back_button">Установить значение</string>
 
     <string name="resultScreen_view1">Получение значения определенного интеграла</string>
     <string name="resultScreen_view2_1">Результат: </string>

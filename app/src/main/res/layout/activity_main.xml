@@ -9,161 +9,78 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView_1"
+        android:id="@+id/textView_about_content"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
-        android:background="#FFEB3B"
-        android:fontFamily="@font/aclonica"
-
-        android:gravity="center"
-        android:text="@string/data_view_1"
-        android:textColor="@color/purple_700"
-        android:textSize="25sp"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="40px"
-        android:fontFamily="@font/aclonica"
-        android:gravity="center"
-        android:text="@string/data_view_2"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_1" />
-
-    <RadioGroup
-        android:id="@+id/radios"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_2"
-
-        >
-
-        <RadioButton
-            android:id="@+id/function_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/yellow"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/data_functions_1" />
-
-        <RadioButton
-            android:id="@+id/function_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/yellow"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/data_functions_2" />
-
-        <RadioButton
-            android:id="@+id/function_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/yellow"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/data_functions_3" />
-
-        <RadioButton
-            android:id="@+id/function_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/yellow"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/data_functions_4" />
-
-        <RadioButton
-            android:id="@+id/function_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/yellow"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/data_functions_5" />
-
-        <RadioButton
-            android:id="@+id/function_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="@color/yellow"
-            android:onClick="onRadioButtonClicked"
-            android:text="@string/data_functions_6" />
-    </RadioGroup>
-
-
-    <TextView
-        android:id="@+id/textView_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="50px"
-        android:fontFamily="@font/aclonica"
-        android:gravity="center"
-        android:text="@string/data_view_3"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radios" />
-
-    <TextView
-        android:id="@+id/textView_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_marginTop="100px"
-        android:fontFamily="@font/aclonica"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:visibility="invisible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_3" />
-
-    <EditText
-        android:id="@+id/edit_firstValue"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="50px"
-        android:layout_marginRight="50dp"
-        android:background="@color/white"
-        android:hint="0"
+        android:text="@string/resultScreen_view1"
+        android:background="@color/red"
         android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
 
-        app:layout_constraintRight_toLeftOf="@id/textView_4"
-        app:layout_constraintTop_toBottomOf="@id/textView_3" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
 
-    <EditText
-        android:id="@+id/edit_secondValue"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50px"
-        android:background="@color/white"
-        android:hint="0"
+
+    <TextView
+        android:id="@+id/textView_result1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultScreen_view2_1"
+        android:background="@color/red"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView_about_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textView_result2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultScreen_view2_2"
+        android:background="@color/red"
         android:textAlignment="center"
-        app:layout_constraintLeft_toRightOf="@+id/textView_4"
-        app:layout_constraintTop_toBottomOf="@id/textView_3" />
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView_about_content"
+        app:layout_constraintLeft_toRightOf="@+id/textView_result1"
+        />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="75dp"
-        android:layout_marginTop="50px"
+        android:text="@string/getting_button"
         android:onClick="onClickButton"
-        android:text="@string/button"
+        android:layout_marginBottom="100px"
+        app:layout_constraintRight_toLeftOf="@id/textView_invis"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_secondValue" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_invis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="100px"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:text="@string/back_button"
+        android:onClick="onClickBack"
+        android:layout_marginBottom="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/textView_invis"
+        app:layout_constraintRight_toRightOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

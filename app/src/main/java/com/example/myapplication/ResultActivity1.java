@@ -1,63 +1,86 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 
 public class ResultActivity1 extends AppCompatActivity {
+        int currentRadioButton = -1;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_result1);
 
-    int value1;
-    int value2;
-    int func;
+            // получаем объект RadioGroup
+            RadioGroup radGrp = (RadioGroup)findViewById(R.id.radios);
+            // обработка переключения состояния переключателя
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        Bundle arguments = getIntent().getExtras();
-
-        if(arguments!=null) {
-            value1 = arguments.getInt("firstValue");
-            value2 = arguments.getInt("secondValue");
-            func= arguments.getInt("function") + 1;
         }
-        setContentView(R.layout.activity_result1);
-    }
-    public void onClickButton(View view){
-        TextView view1 = (TextView)findViewById(R.id.textView_result2);
-        view1.setText(Double.toString(calculateExpression(func,value1,value2)));
-    }
 
-    public void onClickBack(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
-    }
-
-    public double calculateExpression(int expr,int limit1, int limit2){
-        switch (expr){
-            case 1:
-                return (Math.pow(limit2,3)/3) - (Math.pow(limit1,3)/3);
-            case 2:
-                return (((Math.pow(limit2,4)/4)+(Math.pow(limit2,3)/3)-5*limit2)  -
-                        (((Math.pow(limit1,4)/4)+(Math.pow(limit1,3)/3))-5*limit1));
-            case 3:
-                return (((Math.pow(limit2,5)/5)+(Math.pow(limit2,3)/3)+25*limit2) -
-                        (((Math.pow(limit1,5)/5)+(Math.pow(limit1,3)/3))+25*limit1));
-            case 4:
-
-                return ((0.5*limit2 + (Math.sin((2*limit2))/4)) -
-                        (0.5*limit1 + (Math.sin((2*limit1))/4)));
-            case 5:
-                return ((0.5*limit2 - Math.sin((2*limit2))/4) -
-                        (0.5*limit1 - Math.sin((2*limit1))/4));
-            case 6:
-                return ((Math.pow(limit2,3)/3) + 5*Math.pow(limit2,2) + 25 * limit2)
-                        - ((Math.pow(limit1,3)/3) + 5*Math.pow(limit1,2) + 25 * limit1);
+        public void onRadioButtonClicked(View view) {
+            RadioGroup radio = (RadioGroup) findViewById(R.id.radios);
+            switch(view.getId()) {
+                case R.id.function_1:
+                    currentRadioButton = radio.indexOfChild(findViewById(R.id.function_1));
+                    Toast.makeText(getApplicationContext(),R.string.data_functions_1, Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.function_2:
+                    currentRadioButton = radio.indexOfChild(findViewById(R.id.function_2));
+                    Toast.makeText(getApplicationContext(),R.string.data_functions_2, Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.function_3:
+                    currentRadioButton = radio.indexOfChild(findViewById(R.id.function_3));
+                    Toast.makeText(getApplicationContext(),R.string.data_functions_3, Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.function_4:
+                    currentRadioButton = radio.indexOfChild(findViewById(R.id.function_4));
+                    Toast.makeText(getApplicationContext(),R.string.data_functions_4, Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.function_5:
+                    currentRadioButton = radio.indexOfChild(findViewById(R.id.function_5));
+                    Toast.makeText(getApplicationContext(),R.string.data_functions_5, Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.function_6:
+                    currentRadioButton = radio.indexOfChild(findViewById(R.id.function_6));
+                    Toast.makeText(getApplicationContext(),R.string.data_functions_6, Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
         }
-        return 0;
-    }
+
+        public void onClickButton(View view){
+            Intent intent = new Intent(this, MainActivity.class);
+            EditText edit1 = findViewById(R.id.edit_firstValue);
+            EditText edit2 = findViewById(R.id.edit_secondValue);
+            int value1 = 0; int value2 = 0;
+            if(currentRadioButton != -1){
+                if(edit1.getText().toString().matches("^\\d{1,}$") &
+                        edit2.getText().toString().matches("^\\d{1,}$")){
+                    value1 = Integer.parseInt(edit1.getText().toString());
+                    value2 = Integer.parseInt(edit2.getText().toString());
+                    if(value2 < value1){
+                        Toast.makeText(getApplicationContext(),R.string.editText_warning2,Toast.LENGTH_LONG).show();
+                    }else{
+                        intent.putExtra("function",currentRadioButton);
+                        intent.putExtra("firstValue",value1);
+                        intent.putExtra("secondValue",value2);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent);
+                    }
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),R.string.editText_warning1,Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+
 }

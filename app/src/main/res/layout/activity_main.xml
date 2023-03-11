@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_1"
@@ -23,23 +22,22 @@
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/aclonica"
-        android:layout_marginTop="40px"
         android:layout_marginLeft="10sp"
+        android:layout_marginTop="40px"
+        android:fontFamily="@font/aclonica"
         android:gravity="center"
         android:text="@string/data_view_2"
         android:textColor="@color/black"
         android:textSize="20sp"
 
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_1"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView_1" />
 
     <RadioGroup
         android:id="@+id/radios"
@@ -51,42 +49,54 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_2"
 
         >
-        <RadioButton android:id="@+id/function_1"
+
+        <RadioButton
+            android:id="@+id/function_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/data_functions_1"
+            android:buttonTint="@color/yellow"
             android:onClick="onRadioButtonClicked"
-            android:buttonTint="@color/yellow"/>
-        <RadioButton android:id="@+id/function_2"
+            android:text="@string/data_functions_1" />
+
+        <RadioButton
+            android:id="@+id/function_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/data_functions_2"
+            android:buttonTint="@color/yellow"
             android:onClick="onRadioButtonClicked"
-            android:buttonTint="@color/yellow"/>
-        <RadioButton android:id="@+id/function_3"
+            android:text="@string/data_functions_2" />
+
+        <RadioButton
+            android:id="@+id/function_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/data_functions_3"
+            android:buttonTint="@color/yellow"
             android:onClick="onRadioButtonClicked"
-            android:buttonTint="@color/yellow" />
-        <RadioButton android:id="@+id/function_4"
+            android:text="@string/data_functions_3" />
+
+        <RadioButton
+            android:id="@+id/function_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/data_functions_4"
+            android:buttonTint="@color/yellow"
             android:onClick="onRadioButtonClicked"
-            android:buttonTint="@color/yellow"/>
-        <RadioButton android:id="@+id/function_5"
+            android:text="@string/data_functions_4" />
+
+        <RadioButton
+            android:id="@+id/function_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/data_functions_5"
+            android:buttonTint="@color/yellow"
             android:onClick="onRadioButtonClicked"
-            android:buttonTint="@color/yellow"/>
-        <RadioButton android:id="@+id/function_6"
+            android:text="@string/data_functions_5" />
+
+        <RadioButton
+            android:id="@+id/function_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/data_functions_6"
+            android:buttonTint="@color/yellow"
             android:onClick="onRadioButtonClicked"
-            android:buttonTint="@color/yellow"/>
+            android:text="@string/data_functions_6" />
     </RadioGroup>
 
 
@@ -94,9 +104,9 @@
         android:id="@+id/textView_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/aclonica"
-        android:layout_marginTop="50px"
         android:layout_marginLeft="10sp"
+        android:layout_marginTop="50px"
+        android:fontFamily="@font/aclonica"
         android:gravity="center"
         android:text="@string/data_view_3"
         android:textColor="@color/black"
@@ -104,56 +114,56 @@
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radios"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/radios" />
 
     <TextView
         android:id="@+id/textView_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/aclonica"
-        android:layout_marginTop="100px"
         android:layout_marginLeft="10sp"
-        android:visibility="invisible"
+        android:layout_marginTop="100px"
+        android:fontFamily="@font/aclonica"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:visibility="invisible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_3"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView_3" />
 
     <EditText
         android:id="@+id/edit_firstValue"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginRight="50dp"
         android:layout_marginTop="50px"
-        android:textAlignment="center"
+        android:layout_marginRight="50dp"
         android:background="@color/white"
         android:hint="0"
+        android:textAlignment="center"
 
         app:layout_constraintRight_toLeftOf="@id/textView_4"
         app:layout_constraintTop_toBottomOf="@id/textView_3" />
+
     <EditText
         android:id="@+id/edit_secondValue"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginLeft="50dp"
-        android:textAlignment="center"
         android:layout_marginTop="50px"
         android:background="@color/white"
         android:hint="0"
+        android:textAlignment="center"
         app:layout_constraintLeft_toRightOf="@+id/textView_4"
         app:layout_constraintTop_toBottomOf="@id/textView_3" />
+
     <Button
         android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_marginTop="50px"
-        android:text="@string/button"
         android:onClick="onClickButton"
-        app:layout_constraintTop_toBottomOf="@+id/edit_secondValue"
+        android:text="@string/button"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_secondValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

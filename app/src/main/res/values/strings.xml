@@ -7,11 +7,16 @@
 
     <string name="button">Вычислить</string>
     <string name="getting_button">Получить значения</string>
+    <string name="back_button">Вернуться назад</string>
+
+    <string name="resultScreen_view1">Получение значения определенного интеграла</string>
+    <string name="resultScreen_view2_1">Результат: </string>
+    <string name="resultScreen_view2_2">0</string>
 
     <string name="data_functions_1">X<sup>2</sup></string>
-    <string name="data_functions_2">X<sup>3</sup>+x<sup>2</sup>-5</string>
+    <string name="data_functions_2">X<sup>3</sup>+X<sup>2</sup>-5</string>
     <string name="data_functions_3">X<sup>4</sup>+X<sup>2</sup>+25</string>
-    <string name="data_functions_4">(X<sup>2</sup>+7-X)<sup>3</sup></string>
+    <string name="data_functions_4">cos(X)<sup>2</sup></string>
     <string name="data_functions_5">sin(X)<sup>2</sup></string>
     <string name="data_functions_6">(X+5)<sup>2</sup></string>
 

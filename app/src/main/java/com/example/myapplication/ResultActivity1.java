@@ -73,7 +73,7 @@ public class ResultActivity1 extends AppCompatActivity {
                         intent.putExtra("function",currentRadioButton);
                         intent.putExtra("firstValue",value1);
                         intent.putExtra("secondValue",value2);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         startActivity(intent);
                     }
                 }

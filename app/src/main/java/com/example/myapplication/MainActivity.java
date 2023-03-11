@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void onClickBack(View view){
             Intent intent = new Intent();
-            intent.setAction("com.test.calculating");
+            intent.setAction(Intent.ACTION_VIEW);
             intent.addCategory("com.test.second.category");
             startActivity(intent);
         }
